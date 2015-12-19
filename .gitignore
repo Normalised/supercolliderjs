@@ -4,3 +4,4 @@
 coverage
 esdoc
 .node-version
+*.iml
