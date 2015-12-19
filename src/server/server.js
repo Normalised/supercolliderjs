@@ -146,6 +146,10 @@ export class Server extends EventEmitter {
     // o.push(this.options.protocol === 'udp' ? '-u' : '-t');
     o.push('-u');  // only udp socket is implemented right now
     o.push(this.options.serverPort);
+    if(this.options.device) {
+      o.push('-H');
+      o.push(this.options.device);
+    }
     return o;
   }
 
